@@ -1,0 +1,15 @@
+#!/bin/sh
+
+###
+ # @Author: handsomeFu
+ # @Date: 2021-11-09 11:35:08
+ # @LastEditTime: 2021-11-09 11:43:35
+ # @LastEditors: handsomeFu
+ # @Description:
+###
+
+. "$(dirname "$0")/_/husky.sh"
+
+
+# Format and submit code according to lintstagedrc.js configuration
+npm run lint:lint-staged

@@ -1,0 +1,127 @@
+{
+  "name": "web-tms-system",
+  "version": "1.1.3",
+  "description": "Vue3 + Vite2 + ElementPlus 构建",
+  "scripts": {
+    "dev": "vite",
+    "build": "cross-env NODE_ENV=production vite build && esno ./build/script/postBuild.ts",
+    "build:test": "cross-env vite build --mode test && esno ./build/script/postBuild.ts",
+    "serve": "vite preview",
+    "type:check": "vue-tsc --noEmit --skipLibCheck",
+    "lint:eslint": "eslint --cache --max-warnings 0  \"src/**/*.{vue,ts,tsx}\" --fix",
+    "lint:prettier": "prettier --write  .",
+    "lint:lint-staged": "lint-staged",
+    "log": "conventional-changelog --config ./changelog-option -i CHANGELOG.md -s",
+    "prepare": "husky install",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:ningbo-discovery-international/web-tms-system.git"
+  },
+  "author": {
+    "name": "handsomeFu",
+    "email": "fzq980219@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@element-plus/icons-vue": "^1.1.4",
+    "@vue/shared": "^3.2.31",
+    "@vueuse/core": "^8.2.4",
+    "axios": "^0.26.1",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.0",
+    "echarts": "^5.3.2",
+    "element-plus": "^2.1.10",
+    "lodash-es": "^4.17.21",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.13",
+    "qs": "^6.10.3",
+    "resize-observer-polyfill": "^1.5.1",
+    "sortablejs": "^1.15.0",
+    "vue": "^3.2.31",
+    "vue-i18n": "^9.1.9",
+    "vue-router": "^4.0.14",
+    "wangeditor": "^4.7.13",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@types/crypto-js": "^4.1.1",
+    "@types/fs-extra": "^9.0.13",
+    "@types/lodash-es": "^4.17.6",
+    "@types/node": "^17.0.23",
+    "@types/nprogress": "^0.2.0",
+    "@types/qs": "^6.9.7",
+    "@types/sortablejs": "^1.10.7",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "@vitejs/plugin-legacy": "^1.8.0",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "@vitejs/plugin-vue-jsx": "^1.3.9",
+    "@vue/compiler-sfc": "^3.2.31",
+    "chalk": "^5.0.1",
+    "conventional-changelog": "^3.1.25",
+    "conventional-changelog-cli": "^2.2.2",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-define-config": "^1.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "esno": "^0.14.1",
+    "fs-extra": "^10.0.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "prettier": "^2.6.2",
+    "prettier-plugin-organize-imports": "^2.3.4",
+    "prettier-plugin-packagejson": "^2.2.17",
+    "sass": "^1.49.11",
+    "typescript": "^4.6.3",
+    "unplugin-vue-components": "^0.19.3",
+    "unplugin-vue-define-options": "^0.6.1",
+    "vite": "^2.9.1",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-mkcert": "^1.6.0",
+    "vite-plugin-pwa": "^0.11.13",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vite-plugin-windicss": "^1.8.3",
+    "vue-eslint-parser": "^8.3.0",
+    "vue-tsc": "^0.33.9",
+    "windicss": "^3.5.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "resolutions": {
+    "bin-wrapper": "npm:bin-wrapper-china",
+    "rollup": "^2.56.3",
+    "gifsicle": "5.2.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+      "prettier --write--parser json"
+    ],
+    "package.json": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ],
+    "*.vue": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}

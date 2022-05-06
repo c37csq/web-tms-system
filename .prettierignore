@@ -1,0 +1,15 @@
+/dist/*
+.local
+.output.js
+/node_modules/**
+.versionrc
+changelog-option
+pnpm-lock.yaml
+
+**/*.svg
+**/*.sh
+
+/public/*
+.nvmrc
+.npmrc
+.czrc

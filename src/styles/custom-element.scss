@@ -1,0 +1,178 @@
+.el-button.is-disabled[disabled]:not(.el-button--text) {
+  background-color: #ddd;
+  color: #fff;
+  pointer-events: none;
+  cursor: not-allowed;
+  border-color: transparent;
+}
+.el-button.is-disabled.el-button--text[disabled]:not(.el-button--text) {
+  color: var(--el-button-disabled-font-color);
+  cursor: not-allowed;
+}
+/** 更改表格按钮文字 */
+.el-button.is-round.el-button--text {
+  padding: 0;
+}
+.el-button.el-button--text {
+  color: #6e8ed8;
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: initial;
+  display: initial;
+}
+
+.el-form.filter-form {
+  .el-select {
+    width: 220px;
+  }
+  .el-input {
+    width: 220px;
+  }
+  .long-input.el-input {
+    width: 280px;
+  }
+  .long-input.el-textarea {
+    width: 300px;
+  }
+}
+
+.el-form {
+  //.form-date-range {
+  //  .el-form-item__content {
+  //    display: flex;
+  //  }
+  //}
+  //.el-icon.el-input__icon.el-range__close-icon {
+  //  display: inline-flex;
+  //  align-items: center;
+  //}
+  //.el-input__suffix-inner, .el-input__prefix-inner {
+  //  display: inline-flex;
+  //  align-items: center;
+  //}
+}
+
+/** 币种管理中的日期下拉框样式 */
+.el-input__prefix,
+.el-input__suffix {
+  align-items: center;
+}
+
+//.el-pagination .el-input__suffix {
+//  right: 5px !important;
+//}
+.el-pager li.btn-quicknext svg,
+.el-pager li.btn-quickprev svg {
+  width: 16px;
+  height: 28px;
+}
+//.el-date-editor .el-range__icon {
+//  height: auto !important;
+//}
+
+.el-date-editor.el-input,
+.el-date-editor.el-input__inner {
+  width: 100% !important;
+}
+
+.custom-table {
+  .el-table__body .cell .el-input.el-date-editor.el-date-editor--date {
+    width: 138px;
+  }
+}
+
+// home page el-carousel
+.home-service .el-carousel .el-carousel__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.basic-dialog {
+  .el-input__suffix {
+    align-items: center;
+  }
+  .el-input__suffix-inner {
+    align-items: center;
+  }
+
+  .el-form-item--feedback .el-input__validateIcon {
+    align-items: center;
+  }
+
+  .el-dialog__headerbtn .el-dialog__close {
+    color: #000;
+  }
+}
+
+.el-dialog.basic-dialog {
+  .el-dialog__header {
+    background-color: #ecf0f2;
+    margin-right: 0;
+  }
+  .el-dialog__footer {
+    text-align: center;
+  }
+  .el-select {
+    width: 100%;
+  }
+  .el-dialog__headerbtn {
+    top: 0;
+  }
+  .el-cascader {
+    width: 100%;
+  }
+}
+.el-dialog.basic-dialog.basic-dialog-scroll {
+  margin-top: 8vh;
+  height: 80%;
+  overflow: hidden;
+  .el-dialog__body {
+    position: absolute;
+    left: 0;
+    top: 54px;
+    bottom: 48px;
+    right: 0;
+    padding: 0;
+    z-index: 1;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  .el-scrollbar__view {
+    padding: calc(var(--el-dialog-padding-primary) + 10px) var(--el-dialog-padding-primary);
+  }
+  .el-dialog__footer {
+    background: #fff;
+    z-index: 666;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+.el-dialog.basic-dialog.announcement-dialog {
+  margin-top: 40px;
+}
+
+//.form-date-range {
+//  .el-input__prefix-inner { align-items: center; }
+//}
+
+//.el-icon {
+//  font-size: var(--font-size) !important;
+//}
+
+/** 初始密码修改弹窗取消按钮  */
+.message-box-cancel-logout-btn {
+  border: none !important;
+  color: #999 !important;
+  padding: 0 !important;
+
+  &:hover {
+    background-color: transparent !important;
+  }
+}

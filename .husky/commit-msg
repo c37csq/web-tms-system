@@ -1,0 +1,15 @@
+#!/bin/sh
+
+###
+ # @Author: handsomeFu
+ # @Date: 2021-11-09 11:42:58
+ # @LastEditTime: 2021-11-09 11:43:21
+ # @LastEditors: handsomeFu
+ # @Description:
+###
+
+. "$(dirname "$0")/_/husky.sh"
+
+# npx 是npm的一个免安装工具，
+# 本质就是可以临时download执行某个二进制
+npx --no-install commitlint --edit $1
